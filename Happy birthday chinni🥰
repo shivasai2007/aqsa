@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Gift Card</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .card h1 {
+      color: #ff4081;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .card .name {
+      font-weight: bold;
+      font-size: 1.3em;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    .card .gift {
+      font-size: 2.5em;
+      margin-top: 15px;
+    }
+
+    .button {
+      margin-top: 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e558a0;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="card">
+    <!-- Your uploaded image here -->
+    <img src="https://chat.openai.com/cdn-cgi/imagedelivery/X2t-V_PSuUcnr0ehHEQ-2A/f8f4ee1c-26c8-4d8b-52a9-1c11fe246500/public" alt="Birthday Celebration" />
+    <h1>Happy Birthday!</h1>
+    <p>Wishing you a day filled with love, laughter, and sweet memories 🎂</p>
+    <div class="name">Chinni</div>
+    <div class="gift">🎁</div>
+    <button class="button" onclick="alert('🎉 Your surprise is waiting! 🎉')">Claim Your Gift</button>
+  </div>
+
+  <!-- Confetti Script -->
+  <script>
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function ConfettiParticle() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height - canvas.height;
+      this.radius = Math.random() * 6 + 4;
+      this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      this.speed = Math.random() * 3 + 1;
+      this.tilt = Math.random() * 10 - 5;
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        ctx.beginPath();
+        ctx.fillStyle = p.color;
+        ctx.ellipse(p.x, p.y, p.radius, p.radius / 2, p.tilt, 0, Math.PI * 2);
+        ctx.fill();
+        p.y += p.speed;
+        p.tilt += 0.1;
+        if (p.y > canvas.height) {
+          p.y = -10;
+          p.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+
+    function initConfetti() {
+      particles = [];
+      for (let i = 0; i < 100; i++) {
+        particles.push(new ConfettiParticle());
+      }
+      drawParticles();
+    }
+
+    window.onload = initConfetti;
+    window.onresize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+  </script>
+
+</body>
+</html>
