@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Chinni 🥰</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="Annayya_BGM(128k).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="card">
+    <img src="birthday.jpg" alt="Chinni 🥰" class="birthday-img" />
+    <h1>🎉 Happy Birthday Chinni 🥰! 🥳</h1>
+    <p>Wishing you a magical day filled with love, laughter, and happiness!</p>
+    <p class="signature">With love, Suvarna 💖</p>
+
+    <div class="note">
+      <p>I know your birthday is still 122 days away, but I just couldn’t wait that long to tell you happy birthday 🎂🎉</p>
+
+      <p>I hope this birthday brings you all the happiness.<br/>
+      122 days may seem long, but it’s just more time for me to prepare to celebrate the most amazing sister in the world.</p>
+
+      <p>122 days may feel long, but I promise—when the day comes, whether near or far—I’ll be celebrating you with all my heart.</p>
+
+      <p>No matter where you are, you will always be my little light. You are truly one of the most precious persons in my life.</p>
+
+      <p>Sometimes I sit in silence, thinking about all the memories you created. My sister, my soulmate in spirit, my forever friend. You filled my life with a kind of love that is rare and pure. ✨</p>
+
+      <p>No matter how many years go by, no one will ever know my heart like you do and no one will take your place in my heart 💖.  
+      Na chinna jevitham lo chala important person nuvu.</p>
+
+      <p>Happy (very early) Birthday… from your favorite brother 💕</p>
+
+      <p><strong>So here’s a little super-early wish:<br/>
+      Nuvu epudu anadamga undali ✨</strong></p>
+
+      <p class="signature">Your forever fan,<br/>
+      <strong>K. Suvarna Lakshmi</strong></p>
+    </div>
+  </div>
+</body>
+</html>
+.note {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  background: #fff7fb;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(232, 66, 126, 0.05);
+}
+
+.note p {
+  margin-bottom: 15px;
+}
+
+.note strong {
+  color: #d63078;
+}
