@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday Chinni! 🥳</h1>
+    <p>Wishing you a day filled with love, laughter, and endless joy!</p>
+    <p class="signature">With love, Shiva 💖</p>
+  </div>
+</body>
+</html>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffd6ec, #ffeaa7);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+}
+
+h1 {
+  color: #e84393;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  color: #6c5ce7;
+}
